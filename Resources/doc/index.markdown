@@ -73,6 +73,17 @@ You can render a default locale switcher, simply by calling the twig function in
 {{ locale_switcher() }}
 ````
 
+The locale switcher can use a route as parameter :
+
+````
+{{ locale_switcher('acme_bundle_languageswitch') }}
+````
+e.g. if the route for 'acme_bundle_languageswitch' would be: /lang/, and the selected language 'en', the switcher would generate a link pointing to
+
+````
+/lang/?_locale=en
+````
+
 #### Using your own template
 
 You can define your own template in the configuration :
